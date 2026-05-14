@@ -10,11 +10,13 @@ public class Deck {
 	private ArrayList<Card> cards;
 	private Random random = new Random();
 	
+	/* Crea una baraja */
 	public Deck() {
         cards = new ArrayList<>();
         createDeck();
     }
 	
+	/* Crea la baraja para pasarla luego al constructor */
 	private void createDeck() { //Crea una baraja.
         for (Suit suit : Suit.values()) {
             for (Values value : Values.values()) {
@@ -23,12 +25,15 @@ public class Deck {
         }
     }
 	
+	/* Muestra la baraja */
 	public void showDeck() { //Muestra las cartas individualmente.
         for (Card card : cards) {
             System.out.println(card);
         }
     }
 	
+	/* Permite robar cartas de la baraja
+	 * @return devuelve la carta para luego eliminarla de la baraja */
 	public Card drawCard() {
 		
 		System.out.println("Robando carta... quedan: " + cards.size());

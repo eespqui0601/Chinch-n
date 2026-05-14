@@ -14,11 +14,16 @@ public class GameManager {
 	
 	ArrayList<Card> discards = new ArrayList<Card>();
 	
+	/* Crea un game manager que permite controlar la partida con una baraja
+	 * @param deck es la baraja de cartas */
 	public GameManager(Deck deck) {
 		Card firstCard = deck.drawCard();
 		discards.add(firstCard);
 	}
 	
+	/* Empieza el juego
+	 * @param texto es la decision del jugador
+	 * @return boolean */
 	public boolean startGame(String texto) {
 		if(texto.equalsIgnoreCase("Y")) {
 			while(!exit) {
@@ -75,15 +80,23 @@ public class GameManager {
 			return false;
 		}
 	}
-
+	
+	/* Devuelve el numero de jugador
+	 * @return numPlayers */
 	public int getNumPlayers() {
 		return numPlayers;
 	}
-
+	
+	/* Devuelve el numero de bots
+	 * @return numBots */
 	public int getNumBots() {
 		return numBots;
 	}
 	
+	/* Permite tomar la decision de si robar de la baraja o del mazo de descartes
+	 * @param userText que es la decision tomada por el usuario
+	 * @param deck es la baraja utilizada en la partida
+	 * @return devuelve una carta del mazo de descartes o la baraja */
 	public Card makeDesition(String userText, Deck deck) {
 		if (userText.equalsIgnoreCase("b")) {
 			return deck.drawCard();
@@ -96,11 +109,15 @@ public class GameManager {
 		}
 	}
 	
+	/* Añade al mazo de descartes una carta
+	 * @param discardCard es la carta que se va a añadir al mazo de descartes */
 	public void addToDiscards(Card discardCard) {
 		System.out.println(discardCard);
 		discards.add(discardCard);
 	}
 	
+	/* Devuelve el maso de descartes
+	 * @return discards es el mazo de descartes */
 	public ArrayList<Card> getDiscards() {
 		return discards;
 	}

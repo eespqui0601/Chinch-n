@@ -15,15 +15,20 @@ public class Bot extends Player{
 		super(nickname2, state);
 	}
 	
-	/**/
+	/* Devuelve el texto introducido por el bot 
+	 * @returns botText introducido por el bot */
 	public String getBotText() {
 		return botText;
 	}
-
+	
+	/* Devuelve el numero introducido por el bot
+	 * @returns botNumber introducido por el bot */
 	public int getBotNumber() {
 		return botNumber;
 	}
 	
+	/* Permite al bot decidir si quiere robar del la baraja o del mazo de descartes
+	 * @param discard es la ultima carta del mazo de descartes */
 	public void botDesition(Card discard) {
 		boolean markDiscard = false; //Lo utilizaremos para marcar que hemos encontrado una combinacion y que vamos a robar del mazo de descartes. 
 		
@@ -48,7 +53,8 @@ public class Bot extends Player{
 			botText = "b";
 		}
 	}
-
+	
+	/* Permite al bot decidir que carta quiere descartar segun las combinaciones y el valor de laas cartas */
 	public void botDesition2() {
 		
 		int discardNumber = 0;
@@ -139,7 +145,7 @@ public class Bot extends Player{
 			}
 		}
 		
-		botNumber = discardNumber; //Tiene que buscar la carta que quiere descartar en han no en la sortedhand, es decir, 
-	} //las escaleras las tiene que buscar luego esas cartas para guardar el indice correcto de hand.
+		botNumber = discardNumber; 
+	} 
 
 }
