@@ -12,29 +12,41 @@ public class Player {
 	private int combinations;
 	protected ArrayList<Card> hand = new ArrayList<Card>();
 	
+	/* Crea un jugador con su nombre y estado
+	 * @param nickname es el nombre del jugador
+	 * @param state es el estado del jugador */
 	public Player(String nickname, PlayerState state) {
 		this.nickname = nickname;
 		this.state = state;
 	}
 
+	/* Devuelve el nombre del jugador
+	 * @return nickname */
 	public String getNickname() {
 		return nickname;
 	}
 	
 	//---------------Cartas---------------//
 	
+	/* Permite que el jugador reciva una carta
+	 * @param card es la carta que va a recibir */
 	public void receiveCard(Card card) {
 		if (card != null) {
 			hand.add(card);
 		}
 	}
 	
+	/* Reparte las primeras 7 cartas
+	 * @param deck es la baraja */
 	public void getFirstCards(Deck deck) {
 		for (int i = 0; i < 7; i++) {
 			receiveCard(deck.drawCard());
 		}
 	}
 	
+	/* Permite descartar una carta de la mano del jugador
+	 * @param userNumber es el numero introducido por el usuario
+	 * @return la carta que va a descartar y la elimina de la mano del jugador */
 	public Card discardCard(int userNumber) {
 		if(userNumber - 1 == 0) {
 			return hand.remove(0);
@@ -65,25 +77,36 @@ public class Player {
 			return hand.remove(0);
 		}
 	}
-
+	
+	/* Devuelve la mano del jugador
+	 * @return hand es la mano del jugador */
 	public ArrayList<Card> getHand() {
 		return hand;
 	}
 	
 	//---------------Puntuación---------------//
 	
+	/* Devuelve los puntos totales del jugador
+	 * @return points son los puntos totales */
 	public int getPoints() {
 		return points;
 	}
 	
+	/* Devuelve el numero de combinaciones que tiene el jugador
+	 * @return combinations es el numero de combinaciones */
 	public int getCombinations() {
 		return combinations;
 	}
 	
+	/* Permite reestablecer el numero de combinaciones que tiene el jugador
+	 * @param combinations es el numero de combinaciones */
 	public void setCombinations(int combinations) {
 		this.combinations = combinations;
 	}
 
+	/* Cuenta los puntos de las combinaciones de grupos 
+	 * Deben de ser de tres o más cartas para contar como combinación
+	 * @return minusThreePoints es el numero de puntos total de todos los grupos */
 	public int markGroupsOfThree() { 
 		int minusThreePoints = 0;
 		ArrayList<Integer> checkedNumbers = new ArrayList<Integer>();
@@ -109,6 +132,9 @@ public class Player {
 		return minusThreePoints;
 	}
 	
+	/* Cuenta los puntos de todas las combinaciones de escaleras
+	 * Deben de estar formadas por tres o mas cartas para contar como combinación
+	 * @return minusStairPoints son los puntos totales de las combinaciones de escaleras encontradas */
 	public int markGroupsOfStairs() { 
 		int minusStairPoints = 0; 
 		ArrayList<Card> currentStair = new ArrayList<Card>();
@@ -163,6 +189,8 @@ public class Player {
 		return minusStairPoints;
 	}
 	
+	/* Comprueba si el jugador tiene o no Chinchón
+	 * @return boolean */
 	public boolean hasChinChón() { 
 		ArrayList<Card> currentStair = new ArrayList<>();
 		ArrayList<Card> largestStair = new ArrayList<>();
@@ -229,6 +257,8 @@ public class Player {
 		}
 	}
 	
+	/* Calcula el total de puntos de la ronda
+	 * @param roundNumber es el numero de la ronda actual */
 	public void calculatePoints(int roundNumber) {
 		roundPoints = 0;
 		combinations = 0;

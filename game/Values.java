@@ -16,15 +16,22 @@ public enum Values {
 	private int number;
 	private String simbol;
 	
+	/* Crea un valor a partir de un simbolo y un numero
+	 * @param simbol
+	 * @param number */
 	Values(String simbol, int number) {
 		this.simbol = simbol;
 		this.number = number;
 	}
 
+	/* Devuelve el numero
+	 * @return number */
 	public int getNumber() {
 		return number;
 	}
 
+	/* Devuelve el simbolo
+	 * @return simbol */
 	public String getSimbol() {
 		return simbol;
 	}
