@@ -14,3 +14,5 @@ Chinchón/
         ├── Main.java
         ├── Cliente.java
         └── Producto.java
+
+Las clases, atrubutos y metodos estan documentados e el codigo con JavaDoc.
