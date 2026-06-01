@@ -17,6 +17,32 @@ Chinchón/
 
 Las clases, atrubutos y metodos estan documentados en el codigo con JavaDoc.
 
+## Descripción breve de algunas de las clases
+- Main: Se encarga de ejecutar las clases y los metodos para que el juego funcione.
+  
+- Game: Se encarga de mostrar los mensajes por consola. 
+  
+- GameManager: Se encarga de manejar cuando activar Game para que muestre los mensajes por consola y de permitir al jugador tomar ciertas decisiones.
+  
+- Player: Se encarga de guardar la información de los jugadores (nickname, status, points, etc), tambieén maneja las cartas y los puntos de los jugadores.
+  
+- PlayerManager: Se encarga de crear a los jugadores.
+  
+- PlayerState: Es un enum que contiene los distintos estados en los que pueden encontrarse los jugadores. 
+  
+- Human: Se encarga de guardar los datos de los jugadores que son humanos.
+  
+- Bot: Se encarga de guardar los datos de los jugadores que son Bots y de tomar las decisiones del bot. 
+  
+- Deck: Crea y guarda las barajas y mazos que seran utilizados durante la partida.
+  
+- Card: Guarda los datos de cada carta individualmente.
+  
+- Suit: Es un enum que contiene los distintos palos de los que pueden ser las cartas y los simbolos de estos palos.
+  
+- Values: Es un enum que contiene los distintos valores que pueden tomar las cartas y la cantidad de puntos a las que equivalen.
+
+## Capturas del juego
 Aquí hay algunas capturas de pantallas del juego por consola: 
 - <img width="322" height="106" alt="image" src="https://github.com/user-attachments/assets/4f8878d2-1369-4054-868b-2b4a7816d4f8" />
 - <img width="400" height="90" alt="image" src="https://github.com/user-attachments/assets/f7bfbb1a-8821-428e-80e2-878eca584b55" />
