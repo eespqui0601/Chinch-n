@@ -18,6 +18,6 @@ Chinchón/
 Las clases, atrubutos y metodos estan documentados en el codigo con JavaDoc.
 
 Aquí hay algunas capturas de pantallas del juego por consola: 
-<img width="322" height="106" alt="image" src="https://github.com/user-attachments/assets/4f8878d2-1369-4054-868b-2b4a7816d4f8" />
-<img width="400" height="90" alt="image" src="https://github.com/user-attachments/assets/f7bfbb1a-8821-428e-80e2-878eca584b55" />
-<img width="490" height="169" alt="image" src="https://github.com/user-attachments/assets/2953bc4b-0388-47e0-937b-65e558879d21" />
+- <img width="322" height="106" alt="image" src="https://github.com/user-attachments/assets/4f8878d2-1369-4054-868b-2b4a7816d4f8" />
+- <img width="400" height="90" alt="image" src="https://github.com/user-attachments/assets/f7bfbb1a-8821-428e-80e2-878eca584b55" />
+- <img width="490" height="169" alt="image" src="https://github.com/user-attachments/assets/2953bc4b-0388-47e0-937b-65e558879d21" />
