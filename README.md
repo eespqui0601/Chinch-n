@@ -52,3 +52,12 @@ Aquí hay algunas capturas de pantallas del juego por consola:
 Las pruebas unitarias son comprobaciones de partes pequeñas de un programa, normalmente un método o un comportamiento muy concreto. 
 Se preparan los datos, se ejecuta el método y se compara el resultado obtenido con el esperado, si coinciden la prueba pasa, si no coincide falla. 
 No consiste en comprobarlo manualmente, consiste en que lo compruebe de forma automatica. 
+
+Estan las pruebas de caja blanca y las pruebas de caja negra:
+- Para las pruebas de caja blanca es necesario mirar el código y saber como funciona internamente, en estas pruebas comprobaremos que funcionan los bucles y que los metodos funcionan correctamente. 
+
+- Para las pruebas de caja negra no es necesario conocer el código, se basan en comprobar que hagan lo que se supone que deberían de hacer las clases y metodos.
+
+En el caso de mi código he comprobado con una prueba de caja blanca que funcione el reparto de las 7 cartas iniciales, para hacer esto se necesita conocer que hay un método que te permite robar las 7 primeras cartas y además se utiliza para `probarlo un bucle. También es necesario saber que clases son necesarios para que el método funcione. 
+
+Después he hecho una prueba de caja negra que comprueba que al robar una carta de la baraja esta no sea nula. Para esto no es necesario conocer el código solo el método que vamos a probar que funcione como debería. 
