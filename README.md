@@ -61,3 +61,5 @@ Estan las pruebas de caja blanca y las pruebas de caja negra:
 En el caso de mi código he comprobado con una prueba de caja blanca que funcione el reparto de las 7 cartas iniciales, para hacer esto se necesita conocer que hay un método que te permite robar las 7 primeras cartas y además se utiliza para `probarlo un bucle. También es necesario saber que clases son necesarios para que el método funcione. 
 
 Después he hecho una prueba de caja negra que comprueba que al robar una carta de la baraja esta no sea nula. Para esto no es necesario conocer el código solo el método que vamos a probar que funcione como debería. 
+
+Estas pruebas se realizan para ver que las distintas partes del programa funcionen incluso de forma aislada. 
