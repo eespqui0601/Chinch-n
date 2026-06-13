@@ -62,4 +62,4 @@ En el caso de mi código he comprobado con una prueba de caja blanca que funcion
 
 Después he hecho una prueba de caja negra que comprueba que al robar una carta de la baraja esta no sea nula. Para esto no es necesario conocer el código solo el método que vamos a probar que funcione como debería. 
 
-Estas pruebas se realizan para ver que las distintas partes del programa funcionen incluso de forma aislada. 
+Estas pruebas se realizan para ver que las distintas partes del programa funcionen incluso de forma aislada. Además permite la detección de errores de una forma más rápida y permite mejorar el diseño del código para que funcione correctamente y sea más sencillo de probar. 
